@@ -1,0 +1,114 @@
+*{
+    font-size: 14px;
+}
+.wrapper{
+    width: 1300px;
+    /* 水平居中 */
+    margin: 0 auto;
+}
+
+/* header - start */
+header{
+    background: #333333;
+    font-size: 12px;
+    height: 40px;
+    color: #fff;
+}
+header .link-list{
+    float: left; 
+}
+header .login{
+    float: right;
+}
+header li{
+    float: left;
+    /* 垂直居中：行高 */
+    line-height: 40px;
+}
+header a{
+    color: #fff;
+    font-size: 12px;
+}
+header span{
+    margin: 0 6px;
+}
+/* header - end */
+
+/* nav - start */
+nav{
+    height: 80px;
+}
+nav img{
+    width: 150px;
+    height: 56px; 
+    margin-left:-29%;/* 设置图片的位置 */
+    margin-top:12px;
+}
+.nav-list{
+    float: right;
+    margin-right: -87px;
+    margin-top:20px;
+}
+.nav-list .nav-item{
+    float: left;
+    padding: 0 23px;
+    position: relative;
+}
+nav a{
+    font-size: 18px;
+    color: #212121; 
+    /* 以下，设置定期理财和基金投资 */
+    display:inline-block;
+    width: 100%;    /* 宽度占上一级的100% */
+    height: 40px;
+    text-align: center;    /* 文字居中 */
+    line-height: 40px;
+}
+nav a:hover{
+    color: #e94400;
+}
+.nav-item .sub-list{
+    background: #fff;
+    height:80px;
+    padding: 10px 0 ;
+    border: 1px solid #e5e5e5;
+    width: 150px;
+    position: absolute;
+    left:-35px;
+    top:45px;
+    display:none; /* 隐藏下一级菜单*/
+}
+.nav-item .sub-list:hover{
+    display: block; /* 下一级显示 */
+}
+/* 小箭头样式 */
+.nav-list .sub-list::before{
+    content: '';
+    display:block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transform: rotate(45deg);
+    position: absolute; /* 定位 */
+    top:-5px;
+    left:71px;
+    border-bottom: transparent; /* 两个边设置为透明 */
+    border-right: transparent;
+}
+.nav-list .sub-toggle:hover + .sub-list{
+    display: block;
+}
+.nav-list .sub-list a{
+    font-size: 16px;   
+}
+nav .sub-item-a:hover{
+    background: #eee;
+}
+/* nav - end */
+
+
+/* banner - start */
+
+/* banner - end */
+ 
