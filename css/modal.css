@@ -1,0 +1,65 @@
+.modal{
+    /* 子元素不透明使用-rgba */
+    background: rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    /* 使用opacity会导致子元素随父元素透明 */
+    /* opacity:0.5;  */
+    /* flex实现水平垂直居中 */
+    /* display:flex; */
+
+    /* 初始时隐藏状态 */
+    display:none;
+}
+.modal-dialog{  
+    /* 绝对定位 + translate 实现水平垂直居中*/
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffffff; 
+    /* margin: auto; */ 
+    border-radius: 5px;
+}
+.modal-header{
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(117, 117, 117);
+    padding: 15px ; 
+}
+.modal-header .modal-login{
+    float: left;
+}
+.modal-header .modal-close{
+    float: right; 
+}
+.modal-div{
+    padding: 15px ;
+}
+.modal-div .modal-name{
+    padding: 20px 0 ;
+}
+.modal-div .modal-pw{
+    padding: 20px 0 ;
+}
+.modal-footer{
+    width: 100%;
+    padding: 15px ;
+    border-top: 1px solid rgb(117, 117, 117); 
+    position: absolute;
+    left:0;
+    bottom: 0;
+    /* 怪异盒模型 */
+    box-sizing: border-box;
+}
+.modal-footer .modal-cancel{
+    float: left;
+}
+.modal-footer .modal-ok{
+    float: right;
+}

@@ -1,0 +1,52 @@
+<script>
+    // 对象合并涉及到 ：浅拷贝 和 深拷贝
+    let o1 = {
+        name: 'lisi',
+        age: 23
+    }
+    let o2 = {
+        name: 'wangwu',
+        gender: 'man',
+        brother: {
+            name: 'wangxx'
+        },
+        arr: [1, 2, 3, 4]
+    }
+
+    // 遍历一个对象中的属性： forin (该方法存在问题，浅拷贝)
+    for (let p in o2) {
+        // console.log(p + ":" + obj2[p]); //遍历属性
+        o1[p] = o2[p];// 将obj2的属性和其对应的值赋值给obj1
+    }
+    console.log(o1);
+
+    /* 
+        对象合并，解决浅拷贝问题。
+        将obj对象中的属性复制给target。
+        type局限性： 无法区分array和object
+    */
+    function extend(target, obj) {
+        for (let i in obj) {
+            if (typeof obj[i] == 'object') {
+                // 如果obj2中有一个属性的值还是对象，则需要将该值赋值给新的对象  （函数递归调用） 
+                // 三元表达式，判断obj[i]的类型
+                target[i] = extend(obj[i].constructor == Array? [] : {}, obj[i]); 
+            } else {
+                target[i] = obj[i];
+            }
+        }
+        return target;
+    }
+    var o = extend(o1, o2);
+    console.log(o);
+
+    o1.brother.name = 'ssss';
+    console.log(o2.brother.name);
+    console.log(o1.brother.name);
+
+    o1.arr[0] = 5;
+    console.log("o1 : " + o1.arr);
+    console.log("o2 : " + o2.arr);
+
+
+</script>

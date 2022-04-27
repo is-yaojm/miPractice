@@ -1,0 +1,42 @@
+<script>
+    // 创建对象
+    var o1 = new Object();
+    o1.name = 'lisi';
+    o1.sayHi = function(){
+
+    }
+
+    var o2 = {
+        name:'wangwu',
+        sayHello: function(){
+
+        }
+    }
+
+    // 创建类
+    // es6中创建类的方法：
+    class Person{
+        // 属性
+        name ='zhaoliu';
+        // 构造函数
+        constructor(name){
+            this.name =name;
+        }
+        // 方法
+        sayHa(){
+            console.log(this.name);
+        }
+    }
+    // 对象
+    var o3 = new Person('sunba');
+    o3.sayHa();
+
+    // // es6之前
+    // function Person(name){
+    //     this.name =name;
+    // }
+    // Person.prototype.sayHello = function(){
+    //     // es6之前定义类时，他的方法需要放在原型链中，即Person.prototype.xxxx
+    // }
+
+</script>

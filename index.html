@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小米金融首页</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="./css/modal.css"><!-- 组件 -->
+    <link rel="stylesheet" href="./css/reset.css"><!-- 样式重置 -->
+    <link rel="stylesheet" href="./css/style.css"><!-- 公共样式 -->
+    <link rel="stylesheet" href="./css/index.css"><!-- 本页面样式 -->
 </head>
 
 <body>
@@ -25,8 +28,8 @@
             </ul>
 
             <ul class="login">
-                <li><a href="">登录<span>|</span></a></li>
-                <li><a href="">注册</a></li>
+                <li><a href="#" id="btn-login">登录<span>|</span></a></li>
+                <li><a href="#" id="btn-regist">注册</a></li>
             </ul>
         </div>
     </header>
@@ -50,6 +53,7 @@
             <li class="nav-item"><a href="">客户端</a></li>
         </ul>
     </nav>
+    
     <!-- 广告 -->
     <div id="banner">
         <h2>小米用科技畅想金融</h2>
@@ -129,7 +133,7 @@
                     <li>京ICP证110507号</li>
                     <li>客服电话 </li>
                 </ul>
-            </div> 
+            </div>
         </div>
 
         <div class="footer-right">
@@ -138,6 +142,54 @@
             <p>周一至周日 9：00-18：00(仅收市话费)</p>
         </div>
     </footer>
+
+    <!-- 弹窗 -->
+    <div class="modal" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-login">登录</div>
+                <button class="modal-close"> X </button>
+            </div>
+            <div class="modal-div">
+                <div class="modal-name">
+                    用户名：<input type="text" title="name" id="username">
+                </div>
+                <div class="modal-pw">
+                    密码： <input type="password" title="pw" id="password">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-cancel">取消</button>
+                <button class="modal-ok">确认</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-login">注册</div>
+                <button class="modal-close" > X </button>
+            </div>
+            <div class="modal-div">
+                <div class="modal-name">
+                    用户名：<input type="text" title="name" id="user">
+                </div>
+                <div class="modal-pw">
+                    密码： <input type="password" title="pw" id="pw">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-cancel">取消</button>
+                <button class="modal-ok">确认</button> 
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入js部分代码 -->
+    <script src="./js/lib.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

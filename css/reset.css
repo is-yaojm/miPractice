@@ -40,7 +40,7 @@ button {
     border: 0;
     outline: 0;
     font-size-adjust: none;
-    -webkit-text-size-adjust: 100%!important;
+    /* -webkit-text-size-adjust: 100%!important; */
     -webkit-touch-callout: none;
 }
 body {
@@ -49,9 +49,9 @@ body {
     font-size: 16px;
     color: #000;
     background-color: #f8f8f8;
-    -webkit-user-select: none;
+    /* -webkit-user-select: none;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; */
     outline: 0;
 }
 
@@ -118,7 +118,7 @@ a {
 
 :focus {
     outline: 0;
-    -webkit-tap-highlight-color: transparent;
+    /* -webkit-tap-highlight-color: transparent; */
 }
 
 em,
